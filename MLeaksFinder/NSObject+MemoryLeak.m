@@ -36,6 +36,7 @@ const void *const kLatestSenderKey = &kLatestSenderKey;
         return NO;
     
     __weak id weakSelf = self;
+    //默认2秒
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         __strong id strongSelf = weakSelf;
         [strongSelf assertNotDealloc];
